@@ -22,6 +22,7 @@ public class WebServices extends WsConfigurerAdapter{
 		MessageDispatcherServlet servlet=new MessageDispatcherServlet();
 		servlet.setApplicationContext(applicationContext);
 		servlet.setTransformWsdlLocations(true);
+		servlet.setTransformSchemaLocations(true);
 		return new ServletRegistrationBean(servlet,"/ws/soap/*");
 	}
 	@Bean(name="users")
@@ -42,5 +43,9 @@ public class WebServices extends WsConfigurerAdapter{
 	{
 		return new SimpleXsdSchema(new ClassPathResource("users.xsd"));
 	}
-	
+	@Bean
+        public XsdSchema skillSchema()
+       {
+         return new SimpleXsdSchema(new ClassPathResource("skills.xsd"));
+       }
 }
