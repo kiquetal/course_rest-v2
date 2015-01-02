@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://edge.com.py/soap" xmlns:ts="http://edge.com.py/soap/skills">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:saveNewSkillRequest>
+         <gs:idUser>2</gs:idUser>
+         <gs:skill>
+            <ts:skillObject>
+            <ts:name>skill-adasd-</ts:name>
+            </ts:skillObject>
+       </gs:skill>
+      </gs:saveNewSkillRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://edge.com.py/soap">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getAllUserRequest>
+         <gs:name>kiquetal</gs:name>
+      </gs:getAllUserRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
