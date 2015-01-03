@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema	 xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-             targetNamespace="http://edge.com.py/soap/skills" elementFormDefault="qualified">
+             targetNamespace="http://edge.com.py/soap/skills"
+             xmlns:tns="http://edge.com.py/soap/skills"
+              elementFormDefault="qualified">
 <xs:element name="skillObject">
      <xs:complexType>
         <xs:sequence>
@@ -8,4 +10,38 @@
         </xs:sequence>
       </xs:complexType>
     </xs:element>
+    
+    
+    <xs:element name="getAllSkillsRequest">
+       <xs:complexType>
+        <xs:sequence>
+         <xs:element name="skillName" type="xs:string"> </xs:element>
+        </xs:sequence>
+       </xs:complexType>
+    
+    
+    </xs:element>
+    
+    <xs:element name="getAllSkillsResponse">
+      <xs:complexType>
+      <xs:sequence>
+       <xs:element name="skills">
+          <xs:complexType>
+             <xs:sequence>
+                <xs:element name="skill" type="tns:skillItem" maxOccurs="unbounded">
+                </xs:element>
+             </xs:sequence>
+          </xs:complexType>
+       </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    
+    </xs:element>
+    <xs:complexType name="skillItem">
+      <xs:sequence>
+         <xs:element name="idSkill" type="xs:int"></xs:element>
+         <xs:element name="skillName" type="xs:string"></xs:element>
+      
+      </xs:sequence>
+    </xs:complexType>
 </xs:schema> 

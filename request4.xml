@@ -3,7 +3,7 @@
    <soapenv:Header/>
    <soapenv:Body>
       <gs:saveNewSkillRequest>
-         <gs:idUser>2</gs:idUser>
+         <gs:idUser>12</gs:idUser>
          <gs:skill>
             <ts:skillObject>
             <ts:name>skill-adasd-</ts:name>

@@ -38,13 +38,26 @@ public class WebServices extends WsConfigurerAdapter{
 		
 	}
 	
+	@Bean(name="skills")
+	public DefaultWsdl11Definition getSkillsWsdl(XsdSchema skillsSchema)
+	{
+		
+		DefaultWsdl11Definition wsdl1=new DefaultWsdl11Definition();
+		wsdl1.setPortTypeName("UsersWsdl");
+		wsdl1.setLocationUri("/ws/soap/skills");
+		wsdl1.setTargetNamespace("http://edge.com.py/soap");
+		wsdl1.setSchema(skillsSchema);
+		return wsdl1;
+		
+	}
+	
 	@Bean
 	public XsdSchema userSchema()
 	{
 		return new SimpleXsdSchema(new ClassPathResource("users.xsd"));
 	}
 	@Bean
-        public XsdSchema skillSchema()
+        public XsdSchema skillsSchema()
        {
          return new SimpleXsdSchema(new ClassPathResource("skills.xsd"));
        }
